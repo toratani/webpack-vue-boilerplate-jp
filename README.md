@@ -1,8 +1,8 @@
-# 静的ページボイラープレート
+# Vue.jsボイラープレート
 
 ## 概要
 
-静的ページ(HTML/SCSS/ES6)ボイラープレート。
+Vue.js(HTML/SCSS/ES6)ボイラープレート。
 開発環境は MacOS 10.13 で動作確認済み。
 
 ## 特徴
@@ -18,6 +18,7 @@
 - HTML: HTML, js-beautify
 - JS: ES6(Babel), UglifyJs
 - JS Linter: ESLint(eslint-config-google)
+- JSフレームワーク: Vue.js
 - CSS: PostCSS/Sass(SCSS/autoprefixer)
 - CSS Linter: Stylelint(SMACCSS順)
 - CSSスプライト: spritesmith
