@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background-color: $color-bg-default;
+  color: $color-text-default;
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+  line-height: $default-line-height;
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+th,
+td,
+figure {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+a {
+  outline: none;
+  color: $color-text-link;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+em {
+  font-style: normal;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  font-size: $default-font-size;
+}
+
+input {
+  border: none;
+}
+
+[type="number"] {
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+}
+
+button,
+[type="button"] {
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  line-height: $default-line-height;
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+strong {
+  font-weight: normal;
+}
+
+address {
+  font-style: normal;
+}
+
+dfn {
+  font-style: normal;
+}
+
+i {
+  font-style: normal;
+}
+
+hr {
+  border-style: solid;
+}

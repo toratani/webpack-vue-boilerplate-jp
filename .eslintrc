@@ -1,0 +1,21 @@
+{
+  "extends": ["eslint:recommended", "google", "plugin:vue/essential"],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "comma-dangle": 0,
+    "func-names": 0,
+    "max-len": 0,
+    "no-console": 0,
+    "no-invalid-this": 0
+  }
+}

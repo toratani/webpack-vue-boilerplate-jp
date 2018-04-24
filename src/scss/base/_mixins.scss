@@ -1,0 +1,55 @@
+// PC幅(wrap)以上のみスタイル適用
+@mixin large-pc {
+  @media only screen and (min-width: $full-wrap-width) {
+    @content;
+  }
+}
+
+// PC幅(wrap)以下のみスタイル適用
+@mixin not-large-pc {
+  @media only screen and (max-width: ($full-wrap-width - 0.01)) {
+    @content;
+  }
+}
+
+// PC幅以上のみスタイル適用
+@mixin pc {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// SP幅以下のみスタイル適用
+@mixin sp {
+  @media only screen and (max-width: ($breakpoint - 0.01)) {
+    @content;
+  }
+}
+
+// placeholder用
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    opacity: 1;
+
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &:placeholder-shown {
+    @content;
+  }
+}
+
+// Webkitでスクロールバーを隠す
+@mixin hide-webkit-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

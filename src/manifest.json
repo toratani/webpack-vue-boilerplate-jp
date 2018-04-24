@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "name": "タイトル",
+  "short_name": "短いタイトル",
+  "description": "説明",
+  "background_color": "#fff",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "lang": "ja-JP"
+}

@@ -1,0 +1,66 @@
+// wrap
+.wrap {
+  width: 100%;
+  max-width: $full-wrap-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $wrap-padding;
+  padding-left: $wrap-padding;
+
+  // 固定幅
+  &--fix {
+    @include pc {
+      width: $full-wrap-width;
+    }
+
+    @include sp {
+      width: 100%;
+    }
+  }
+
+  // SPでパディングなし
+  &--sp-pad-0 {
+    @include sp {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+// その画面幅のみ表示
+.only-large-pc {
+  @include not-large-pc {
+    display: none !important;
+  }
+}
+
+.only-not-large-pc {
+  @include large-pc {
+    display: none !important;
+  }
+}
+
+.only-pc {
+  @include sp {
+    display: none !important;
+  }
+}
+
+.only-sp {
+  @include pc {
+    display: none !important;
+  }
+}
+
+// 見た目非表示
+// display: noneとは違い、スクリーンリーダーや検索エンジンのロボットからはコンテンツを隠さない
+.u-visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}

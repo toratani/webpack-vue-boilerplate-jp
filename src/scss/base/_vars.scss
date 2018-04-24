@@ -1,0 +1,31 @@
+// Color: Background
+$color-bg-default: #fff;
+$color-bg-gray: #ddd;
+$color-bg-black: #000;
+$color-bg-alpha-black-5: rgba(#000, 0.5);
+
+// Color: Border
+$color-border-white: #fff;
+$color-border-gray: #ddd;
+$color-border-black: #000;
+
+// Color: Shadow
+
+// Color: Text
+$color-text-default: #000;
+$color-text-white: #fff;
+$color-text-link: #337ab7;
+
+// Color: Theme
+
+// Width
+$breakpoint: 768px; // ブレークポイント 標準:768px
+$wrap-width: 1024px; // PCデザインwrap横幅 標準:1024px
+
+$wrap-padding: 15px; // wrapの左右padding 標準:15px(PC)
+$full-wrap-width: $wrap-width + $wrap-padding * 2; // padding計算済み PCデザインwrap横幅
+
+// Font
+$default-font-size: 1.6rem;
+$default-line-height: 1.6;
+$default-font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
