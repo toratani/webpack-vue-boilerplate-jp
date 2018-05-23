@@ -4,7 +4,7 @@ import VueRouter from 'vue-router';
 import Home from './components/05-pages/Home.vue';
 import Notfound from './components/05-pages/Notfound.vue';
 
-module.exports = new VueRouter({
+export default new VueRouter({
   routes: [
     // Home
     {

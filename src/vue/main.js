@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import Vue from 'vue';
 import Vuex from 'vuex';
 import VueRouter from 'vue-router';
@@ -12,7 +14,7 @@ Vue.use(VueRouter);
 Vue.config.productionTip = false;
 
 // Router
-const router = require('./routes.js');
+import router from './routes.js';
 
 // Store
 const store = new Vuex.Store(storeData);

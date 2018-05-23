@@ -1,9 +1,9 @@
-const state = require('./state/state.js');
-const mutations = require('./mutations/mutations.js');
-const actions = require('./actions/actions.js');
-const getters = require('./getters/getters.js');
+import state from './state/state.js';
+import mutations from './mutations/mutations.js';
+import actions from './actions/actions.js';
+import getters from './getters/getters.js';
 
-module.exports = {
+export default {
   state,
   mutations,
   actions,

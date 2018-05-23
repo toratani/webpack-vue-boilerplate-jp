@@ -66,9 +66,6 @@ const config = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         loader: 'eslint-loader',
-        options: {
-          fix: true
-        }
       },
       {
         test: /\.vue$/,

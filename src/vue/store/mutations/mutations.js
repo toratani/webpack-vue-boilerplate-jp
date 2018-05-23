@@ -1,9 +1,9 @@
-const Vue = require('vue');
+import Vue from 'vue';
 
 // Mutations
-module.exports = {
+export default {
   // リスト更新
   setSomethingList(state, payload) {
     Vue.set(state, 'somethingList', payload);
-  },
+  }
 };

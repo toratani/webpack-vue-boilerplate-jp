@@ -1,5 +1,10 @@
 {
-  "extends": ["eslint:recommended", "google", "plugin:vue/essential"],
+  "extends": [
+    "eslint:recommended",
+    "google",
+    "plugin:vue/essential",
+    "plugin:prettier/recommended"
+  ],
   "parser": "vue-eslint-parser",
   "parserOptions": {
     "parser": "babel-eslint",
