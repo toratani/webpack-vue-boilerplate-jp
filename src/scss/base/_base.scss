@@ -77,9 +77,9 @@ em {
   font-style: normal;
 }
 
-input[type="text"],
-input[type="url"],
-input[type="number"],
+input[type='text'],
+input[type='url'],
+input[type='number'],
 select,
 textarea {
   font-size: $default-font-size;
@@ -90,7 +90,7 @@ input {
   outline: none;
 }
 
-[type="number"] {
+[type='number'] {
   -moz-appearance: textfield;
 
   &::-webkit-outer-spin-button,
@@ -101,7 +101,7 @@ input {
 }
 
 button,
-[type="button"] {
+[type='button'] {
   padding: 0;
   border: none;
   outline: none;

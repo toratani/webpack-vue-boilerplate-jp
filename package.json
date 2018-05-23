@@ -7,6 +7,7 @@
     "postinstall": "./node_modules/.bin/webdriver-manager update",
     "dev": "cross-env NODE_ENV=development webpack -d -w --config config/webpack.dev.babel.js",
     "prod": "cross-env NODE_ENV=production webpack -p --config config/webpack.prod.babel.js",
+    "prettier": "prettier-eslint --write \"src/**/*.{css,scss,js,vue,json}\"",
     "test:ui-serve": "./node_modules/.bin/webdriver-manager start",
     "test:ui-start": "./node_modules/.bin/cucumber-js test/ui/features"
   },
@@ -51,6 +52,7 @@
     "postcss-scss": "^1.0.3",
     "precss": "^3.1.2",
     "prettier": "^1.12.1",
+    "prettier-eslint-cli": "^4.7.1",
     "progress-bar-webpack-plugin": "^1.11.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.2",
