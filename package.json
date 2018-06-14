@@ -5,11 +5,21 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "./node_modules/.bin/webdriver-manager update",
-    "dev": "cross-env NODE_ENV=development webpack -d -w --config config/webpack.dev.babel.js",
-    "prod": "cross-env NODE_ENV=production webpack -p --config config/webpack.prod.babel.js",
-    "prettier": "prettier-eslint --write \"src/**/*.{css,scss,js,vue,json}\"",
+    "dev":
+      "cross-env NODE_ENV=development webpack -d -w --config config/webpack.dev.babel.js",
+    "prod":
+      "cross-env NODE_ENV=production webpack -p --config config/webpack.prod.babel.js",
+    "precommit": "lint-staged",
+    "prettier":
+      "prettier-eslint --write \"src/**/*.{js,jsx,css,scss,json,vue}\"",
     "test:ui-serve": "./node_modules/.bin/webdriver-manager start",
     "test:ui-start": "./node_modules/.bin/cucumber-js test/ui/features"
+  },
+  "lint-staged": {
+    "*.{js,jsx,css,scss,json,vue}": [
+      "prettier --write \"./src/**/*.{js,jsx,css,scss,json,vue}\"",
+      "git add"
+    ]
   },
   "keywords": [],
   "author": "作者名",
@@ -43,8 +53,10 @@
     "glob": "^7.1.2",
     "html-beautify-webpack-plugin": "^1.0.4",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^0.14.3",
     "imagemin-webpack-plugin": "^2.0.0",
     "import-glob-loader": "^1.1.0",
+    "lint-staged": "^7.2.0",
     "md5": "^2.2.1",
     "node-sass": "^4.7.2",
     "on-build-webpack": "^0.1.0",

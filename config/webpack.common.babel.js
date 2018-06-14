@@ -23,13 +23,13 @@ const config = {
   entry: path.resolve(basePath, 'src/entry.js'),
   output: {
     path: path.resolve(basePath, 'dist'),
-    filename: 'js/bundle.js',
+    filename: 'js/bundle.js'
   },
   resolve: {
     extensions: ['.js', '.vue'],
     alias: {
-      'src': path.resolve(basePath, 'src')
-    },
+      src: path.resolve(basePath, 'src')
+    }
   },
   module: {
     rules: [
@@ -37,8 +37,8 @@ const config = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'postcss-loader'],
-        }),
+          use: ['css-loader', 'postcss-loader']
+        })
       },
       {
         test: /\.scss$/,
@@ -54,42 +54,47 @@ const config = {
             'postcss-loader',
             'sass-loader',
             'import-glob-loader'
-          ],
-        }),
+          ]
+        })
       },
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        loader: 'babel-loader',
+        loader: 'babel-loader'
       },
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
         loader: 'eslint-loader',
+        options: {
+          fix: true
+        }
       },
       {
         test: /\.vue$/,
         exclude: /(node_modules)/,
-        loader: 'vue-loader',
+        loader: 'vue-loader'
       }
-    ],
+    ]
   },
   plugins: [
     // dist初期化
     new CleanWebpackPlugin(['dist'], {
       root: basePath,
       verbose: true,
-      dry: false,
+      dry: false
     }),
     // CSS出力
     new ExtractTextPlugin({
       filename: 'css/style.css'
     }),
     // 画像コピー
-    new CopyWebpackPlugin([{
-      from: 'img/**/*.+(jpg|jpeg|png|gif|svg)',
-      to: './',
-    }]),
+    new CopyWebpackPlugin([
+      {
+        from: 'img/**/*.+(jpg|jpeg|png|gif|svg)',
+        to: './'
+      }
+    ]),
     // CSSスプライト
     new SpritesmithPlugin({
       src: {
@@ -121,19 +126,23 @@ const config = {
     new ProgressBarPlugin(),
     // マニフェスト挿入
     new ManifestPlugin({
-      seed: JSON.parse(fs.readFileSync(path.resolve(basePath, 'src', 'manifest.json'), 'utf-8'))
-    }),
-  ],
+      seed: JSON.parse(
+        fs.readFileSync(path.resolve(basePath, 'src', 'manifest.json'), 'utf-8')
+      )
+    })
+  ]
 };
 
 // HTML
 const entryHtmlPaths = glob.sync('src/html/*.html');
-entryHtmlPaths.forEach((htmlFilePath) => {
-  config.plugins.push(new HtmlWebpackPlugin({
-    template: htmlFilePath.replace(/^src\//, ''),
-    filename: path.resolve(basePath, 'dist', path.basename(htmlFilePath)),
-    hash: true
-  }));
+entryHtmlPaths.forEach(htmlFilePath => {
+  config.plugins.push(
+    new HtmlWebpackPlugin({
+      template: htmlFilePath.replace(/^src\//, ''),
+      filename: path.resolve(basePath, 'dist', path.basename(htmlFilePath)),
+      hash: true
+    })
+  );
 });
 
 // エクスポート

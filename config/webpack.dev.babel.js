@@ -10,7 +10,7 @@ const config = webpackMerge(commonConfig, {
   devtool: 'inline-source-map', // ソースマップ
   plugins: [
     // ローカルサーバ Browsersync
-    new BrowserSyncPlugin(browserSyncConfig),
+    new BrowserSyncPlugin(browserSyncConfig)
   ]
 });
 
