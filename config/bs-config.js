@@ -9,6 +9,7 @@ export default {
   // port: 3000,
   // open: 'external',
   notify: false,
+  reloadDelay: 1000,
   server: {
     baseDir: './dist',
     index: 'index.html',

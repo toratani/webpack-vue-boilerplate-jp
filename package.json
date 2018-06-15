@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "./node_modules/.bin/webdriver-manager update",
-    "dev":
+    "start":
       "cross-env NODE_ENV=development webpack -d -w --config config/webpack.dev.babel.js",
-    "prod":
+    "build":
       "cross-env NODE_ENV=production webpack -p --config config/webpack.prod.babel.js",
     "precommit": "lint-staged",
     "prettier":

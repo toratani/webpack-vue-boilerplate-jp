@@ -49,13 +49,13 @@ Vue.js(HTML/SCSS/ES6)ボイラープレート。
 
 ### 開発
 
-- ターミナルで当プロジェクトフォルダに移動後 `npm run dev` を実行
-- `localhost:8082`, `localhost:3000` もしくは `パブリックIP:3000` をブラウザで確認
+- ターミナルで当プロジェクトフォルダに移動後 `npm run start` を実行
+- `localhost:8082` 又は `localhost:3000`, `パブリックIP:3000` をブラウザで確認
 - `Ctrl+C` で終了
 
 ### 本番
 
-- ターミナルで当プロジェクトフォルダに移動後 `npm run prod` を実行
+- ターミナルで当プロジェクトフォルダに移動後 `npm run build` を実行
 - `/dist` フォルダを該当環境にコピー
 
 ## UIテスト
@@ -67,6 +67,6 @@ Vue.js(HTML/SCSS/ES6)ボイラープレート。
 
 ### 実行
 
-- ターミナル1で `npm run dev` を実行。ページを開く。（ `Ctrl+C` で終了）
+- ターミナル1で `npm run start` を実行。ページを開く。（ `Ctrl+C` で終了）
 - ターミナル2で `npm run test:ui-serve` を実行。テストサーバを立ち上げる。（ `Ctrl+C` で終了）
 - ターミナル3で `npm run test:ui-start` を実行。テスト実行。←基本このコマンドの繰り返し
