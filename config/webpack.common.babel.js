@@ -63,17 +63,17 @@ const config = {
         loader: 'babel-loader'
       },
       {
-        test: /\.js$/,
+        test: /\.vue$/,
+        exclude: /(node_modules)/,
+        loader: 'vue-loader'
+      },
+      {
+        test: /\.(js|vue)$/,
         exclude: /(node_modules)/,
         loader: 'eslint-loader',
         options: {
           fix: true
         }
-      },
-      {
-        test: /\.vue$/,
-        exclude: /(node_modules)/,
-        loader: 'vue-loader'
       }
     ]
   },
@@ -119,7 +119,7 @@ const config = {
     // Stylelint
     new StyleLintPlugin({
       configFile: '.stylelintrc',
-      files: 'src/scss/**/*.scss',
+      files: ['../src/scss/**/*.scss', '../src/vue/**/*.scss'],
       fix: true
     }),
     // 進捗

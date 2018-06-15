@@ -7,6 +7,6 @@ module.exports = {
     autoprefixer({
       browsers: ['last 4 versions', 'iOS >= 8']
     }),
-    precss,
-  ],
+    precss
+  ]
 };
