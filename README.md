@@ -7,14 +7,13 @@ Vue.js(HTML/SCSS/ES6)ボイラープレート。
 
 ## 特徴
 
-### 技術
-
 2017年現在の標準的な技術を使用しています。
 
 - パッケージ管理: npm
 - バンドラ: Webpack 4(Babel)
 - ローカルサーバ: Browsersync
 - エディタ設定: editorconfig(utf-8/LF/space2)
+- コードフォーマッター: Prettier
 - HTML: HTML, js-beautify
 - JS: ES6(Babel), UglifyJs
 - JS Linter: ESLint(eslint-config-google)
@@ -27,13 +26,6 @@ Vue.js(HTML/SCSS/ES6)ボイラープレート。
 - SVGスプライト: svg-spritemap-webpack-plugin(svgo)
 - favicon: 自動生成
 - UIテスト: Cucumber(cucumber-mink記法)
-
-### Node.jsバージョン
-
-ビルドするには[Node.js](https://nodejs.org/ja/)をインストールしてください。
-
-- node >= v8.5.0
-- npm >= v5.6.0
 
 ## ルール
 
@@ -48,10 +40,17 @@ Vue.js(HTML/SCSS/ES6)ボイラープレート。
 
 ## ビルド
 
+### Node.jsバージョン
+
+ビルドするには[Node.js](https://nodejs.org/ja/)をインストールしてください。
+
+- node >= v8.5.0
+- npm >= v5.6.0
+
 ### 開発
 
 - ターミナルで当プロジェクトフォルダに移動後 `npm run dev` を実行
-- `localhost:8082` もしくは `パブリックIP:3000` をブラウザで確認
+- `localhost:8082`, `localhost:3000` もしくは `パブリックIP:3000` をブラウザで確認
 - `Ctrl+C` で終了
 
 ### 本番
