@@ -7,22 +7,7 @@
   </main>
 </template>
 
-<style lang="scss" scoped>
-@import 'src/scss/shared';
-
-.home {
-  &__title {
-    color: $color-text-link;
-  }
-}
+<style src="./HomeTemp.scss" lang="scss" scoped>
 </style>
-
-<script>
-export default {
-  computed: {
-    somethingList() {
-      return this.$store.getters.somethingList;
-    }
-  }
-};
+<script src="./HomeTemp.js">
 </script>

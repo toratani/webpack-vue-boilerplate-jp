@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import HomeTemp from '../04-templates/HomeTemp';
+import HomeTemp from '../04-templates/HomeTemp.vue';
 
 export default {
   components: {

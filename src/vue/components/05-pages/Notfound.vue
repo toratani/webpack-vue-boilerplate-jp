@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import NotfoundTemp from '../04-templates/NotfoundTemp';
+import NotfoundTemp from '../04-templates/NotfoundTemp.vue';
 
 export default {
   components: {

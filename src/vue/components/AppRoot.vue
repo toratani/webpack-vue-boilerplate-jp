@@ -4,8 +4,5 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-.app-root {
-  height: 100%;
-}
+<style src="./AppRoot.scss" lang="scss" scoped>
 </style>

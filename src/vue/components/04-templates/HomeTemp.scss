@@ -1,0 +1,7 @@
+@import 'src/scss/shared';
+
+.home {
+  &__title {
+    color: $color-text-link;
+  }
+}
